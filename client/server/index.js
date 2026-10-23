@@ -15,4 +15,5 @@ app.use(cors({ origin: process.env.CLIENT_URL || "*" }));
 app.use(express.json());
 app.use("/api/chat", chat);
 app.get("/", (_, res) => res.send("ok"));
-init().then(() => app.listen(process.env.PORT || 5000, () => console.log("server up")));
+await init();
+export default app;
