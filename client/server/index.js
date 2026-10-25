@@ -16,4 +16,8 @@ app.use(express.json());
 app.use("/api/chat", chat);
 app.get("/", (_, res) => res.send("ok"));
 await init();
+const PORT = process.env.PORT || 5000;
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+}
 export default app;
