@@ -18,7 +18,6 @@ export default function Hero() {
         <motion.p className="lead" {...up(0.4)}>I turn AI ideas into clean, fast interfaces, from smart search to automated tagging.</motion.p>
         <motion.div className="row" {...up(0.5)}>
           <a className="btn" href="#projects">See my projects</a>
-          <a className="btn ghost" href="/resume.pdf" download>Download resume</a>
           <button className="btn ghost" onClick={() => window.dispatchEvent(new Event("open-chat"))}>Ask my AI</button>
         </motion.div>
       </div>

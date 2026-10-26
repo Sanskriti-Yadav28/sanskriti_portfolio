@@ -7,12 +7,11 @@ export default function Navbar() {
   return (
     <header className="nav">
       <a href="#home" className="logo">SY</a>
-      <nav>
+            <nav>
         {ids.map((i) => (
           <a key={i} href={`#${i}`} className={active === i ? "on" : ""}>{i}</a>
         ))}
       </nav>
-      <a className="btn small" href="/resume.pdf" download>Resume</a>
     </header>
   );
 }
