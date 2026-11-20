@@ -3,6 +3,7 @@ export const links = {
   phone: "+91 98048 14578",
   github: "https://github.com/Sanskriti-Yadav28",
   linkedin: "https://www.linkedin.com/in/sanskriti-yadav-rs06/",
+  leetcode: "https://leetcode.com/u/Sanskriti_Yadav02/",
 };
 
 export const edu = [

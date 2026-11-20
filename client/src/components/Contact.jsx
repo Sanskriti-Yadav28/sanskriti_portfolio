@@ -23,6 +23,7 @@ export default function Contact() {
             <li><a href={`tel:${links.phone.replace(/\s/g, "")}`}>{links.phone}</a></li>
             <li><a href={links.github} target="_blank" rel="noreferrer">GitHub</a></li>
             <li><a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href={links.leetcode} target="_blank" rel="noreferrer">LeetCode</a></li>
           </ul>
         </div>
         <form className="cf" onSubmit={send}>
