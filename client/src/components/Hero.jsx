@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { links } from "../data";
 
 const rings = [
   { r: 110, d: 24, items: ["React", "Java", "SQL"] },
@@ -11,12 +12,27 @@ const up = (d) => ({ initial: { opacity: 0, y: 40 }, animate: { opacity: 1, y: 0
 export default function Hero() {
   return (
     <div className="hero wrap">
-      <div>
+      <div className="hero-top">
         <motion.p className="badge" {...up(0)}>Recent B.Tech CSE graduate, class of 2026</motion.p>
-        <motion.h1 {...up(0.15)}>Sanskriti<br />Yadav</motion.h1>
+        <motion.h1 {...up(0.15)}>
+          Sanskriti{" "}
+          <span className="uline">
+            Yadav
+            <svg viewBox="0 0 300 12" preserveAspectRatio="none">
+              <motion.path d="M2 8 C 50 0, 100 12, 150 6 S 250 2, 298 8" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.9, duration: 0.9 }} />
+            </svg>
+          </span>
+        </motion.h1>
+      </div>
+      <div>
         <motion.p className="role" {...up(0.3)}>Software developer building React and AI-powered apps</motion.p>
         <motion.p className="lead" {...up(0.4)}>I turn AI ideas into clean, fast interfaces, from smart search to automated tagging.</motion.p>
-        <motion.div className="row" {...up(0.5)}>
+        <motion.div className="stats" {...up(0.5)}>
+          <a className="stat hot" href={links.leetcode} target="_blank" rel="noreferrer"><b>400+</b><span>LeetCode problems solved</span></a>
+          <div className="stat"><b>3</b><span>Projects built</span></div>
+          <div className="stat"><b>2026</b><span>B.Tech CSE graduate</span></div>
+        </motion.div>
+        <motion.div className="row" {...up(0.6)}>
           <a className="btn" href="#projects">See my projects</a>
           <button className="btn ghost" onClick={() => window.dispatchEvent(new Event("open-chat"))}>Ask my AI</button>
         </motion.div>

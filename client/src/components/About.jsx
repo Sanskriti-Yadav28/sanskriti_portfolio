@@ -1,4 +1,4 @@
-import { edu, certs } from "../data";
+import { edu, certs, links } from "../data";
 
 export default function About() {
   return (
@@ -20,6 +20,11 @@ export default function About() {
           </li>
         ))}
       </ul>
+      <a className="lc-wide" href={links.leetcode} target="_blank" rel="noreferrer">
+        <b>400+</b>
+        <span>LeetCode problems solved<small>Steady practice in data structures and algorithms. See my public profile.</small></span>
+        <em>View profile</em>
+      </a>
     </div>
   );
 }

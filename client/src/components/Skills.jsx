@@ -15,6 +15,7 @@ export default function Skills() {
         </div>
         <h3 className="soft-h">Soft skills</h3>
         <div className="chips big">{soft.map((x) => <span key={x}>{x}</span>)}</div>
+        <h3 className="soft-h">Problem solving</h3>
         <a className="lc" href={links.leetcode} target="_blank" rel="noreferrer">
           <b>400+</b>
           <span>problems solved on LeetCode<small>Data structures and algorithms practice. View my profile</small></span>
